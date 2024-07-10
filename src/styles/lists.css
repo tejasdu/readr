@@ -1,0 +1,36 @@
+#list-background {
+    width: 280px; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    height: 460px; /* Adjust as needed */
+    background-color: #303738; /* Light gray background, adjust color as needed */
+    border-radius: 20px; /* This creates the curved corners */
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto; /* Centers the box horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    padding-bottom: 0px;
+    overflow-y: auto;
+  }
+
+  #button {
+    display: block;
+    width: 315px; /* Adjust as needed */
+    padding: 10px 15px;
+    margin: 10px auto 0; /* Centers the button and adds top margin */
+    background-color: rgb(37, 150, 190); /* Matches the color used in hr */
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #button:hover {
+    background-color: rgb(28, 126, 160); /* Slightly darker on hover */
+  }
+  
+  #button:active {
+    transform: translateY(1px); /* Slight push effect when clicked */
+  }

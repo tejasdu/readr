@@ -1,0 +1,9 @@
+{
+    "manifest_version": 3,
+    "name": "Readr.",
+    "version": "1.0.0",
+    "description": "A smarter way to manage your reading lists; because you're not the average Readr.",
+    "action": {
+        "default_popup": "index.html"
+    }
+  }

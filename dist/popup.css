@@ -1,0 +1,80 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+body {
+    background-color:#202124;
+    width: 325px;
+    height: 700px;
+}
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/heading.css ***!
+  \**************************************************************************/
+#title {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#title span {
+    color: rgb(37, 150, 190);
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 8px;
+    margin-top: 0;
+}
+
+#divider {
+    width: 45%;
+    border: 1px rgb(37, 150, 190); /* Change the border color */
+    background-color: rgb(37, 150, 190); /* Change the background color (for older browsers) */
+    height: 1px; /* Ensures the height is 1px */
+}
+
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/lists.css ***!
+  \************************************************************************/
+#list-background {
+    width: 280px; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    height: 460px; /* Adjust as needed */
+    background-color: #303738; /* Light gray background, adjust color as needed */
+    border-radius: 20px; /* This creates the curved corners */
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto; /* Centers the box horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    padding-bottom: 0px;
+    overflow-y: auto;
+  }
+
+  #button {
+    display: block;
+    width: 315px; /* Adjust as needed */
+    padding: 10px 15px;
+    margin: 10px auto 0; /* Centers the button and adds top margin */
+    background-color: rgb(37, 150, 190); /* Matches the color used in hr */
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #button:hover {
+    background-color: rgb(28, 126, 160); /* Slightly darker on hover */
+  }
+  
+  #button:active {
+    transform: translateY(1px); /* Slight push effect when clicked */
+  }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9wdXAuY3NzIiwibWFwcGluZ3MiOiI7OztBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLFlBQVk7SUFDWixhQUFhO0FBQ2pCLEM7Ozs7QUNKQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsd0NBQXdDO0lBQ3hDLGdCQUFnQjtJQUNoQixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSx3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLHdDQUF3QztJQUN4QyxjQUFjO0lBQ2QsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLFVBQVU7SUFDViw2QkFBNkIsRUFBRSw0QkFBNEI7SUFDM0QsbUNBQW1DLEVBQUUscURBQXFEO0lBQzFGLFdBQVcsRUFBRSw4QkFBOEI7QUFDL0M7Ozs7O0FDekJBO0lBQ0ksWUFBWSxFQUFFLHFCQUFxQjtJQUNuQyxnQkFBZ0IsRUFBRSxxQkFBcUI7SUFDdkMsYUFBYSxFQUFFLHFCQUFxQjtJQUNwQyx5QkFBeUIsRUFBRSxrREFBa0Q7SUFDN0UsbUJBQW1CLEVBQUUsb0NBQW9DO0lBQ3pELGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsY0FBYyxFQUFFLGlDQUFpQztJQUNqRCx3Q0FBd0MsRUFBRSxtQ0FBbUM7SUFDN0UsbUJBQW1CO0lBQ25CLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGNBQWM7SUFDZCxZQUFZLEVBQUUscUJBQXFCO0lBQ25DLGtCQUFrQjtJQUNsQixtQkFBbUIsRUFBRSwyQ0FBMkM7SUFDaEUsbUNBQW1DLEVBQUUsaUNBQWlDO0lBQ3RFLFlBQVk7SUFDWixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLHdDQUF3QztJQUN4QyxlQUFlO0lBQ2YsZUFBZTtJQUNmLHNDQUFzQztFQUN4Qzs7RUFFQTtJQUNFLG1DQUFtQyxFQUFFLDZCQUE2QjtFQUNwRTs7RUFFQTtJQUNFLDBCQUEwQixFQUFFLG9DQUFvQztFQUNsRSIsInNvdXJjZXMiOlsid2VicGFjazovL3JlYWRyLy4vc3JjL2luZGV4LmNzcyIsIndlYnBhY2s6Ly9yZWFkci8uL3NyYy9zdHlsZXMvaGVhZGluZy5jc3MiLCJ3ZWJwYWNrOi8vcmVhZHIvLi9zcmMvc3R5bGVzL2xpc3RzLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiMyMDIxMjQ7XG4gICAgd2lkdGg6IDMyNXB4O1xuICAgIGhlaWdodDogNzAwcHg7XG59IiwiI3RpdGxlIHtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgQXJpYWwsIHNhbnMtc2VyaWY7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICBwYWRkaW5nLWJvdHRvbTogMDtcbn1cblxuI3RpdGxlIHNwYW4ge1xuICAgIGNvbG9yOiByZ2IoMzcsIDE1MCwgMTkwKTtcbn1cblxucCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LWZhbWlseTogJ1JvYm90bycsIEFyaWFsLCBzYW5zLXNlcmlmO1xuICAgIGZvbnQtc2l6ZTogOHB4O1xuICAgIG1hcmdpbi10b3A6IDA7XG59XG5cbiNkaXZpZGVyIHtcbiAgICB3aWR0aDogNDUlO1xuICAgIGJvcmRlcjogMXB4IHJnYigzNywgMTUwLCAxOTApOyAvKiBDaGFuZ2UgdGhlIGJvcmRlciBjb2xvciAqL1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigzNywgMTUwLCAxOTApOyAvKiBDaGFuZ2UgdGhlIGJhY2tncm91bmQgY29sb3IgKGZvciBvbGRlciBicm93c2VycykgKi9cbiAgICBoZWlnaHQ6IDFweDsgLyogRW5zdXJlcyB0aGUgaGVpZ2h0IGlzIDFweCAqL1xufVxuIiwiI2xpc3QtYmFja2dyb3VuZCB7XG4gICAgd2lkdGg6IDI4MHB4OyAvKiBBZGp1c3QgYXMgbmVlZGVkICovXG4gICAgbWF4LXdpZHRoOiA2MDBweDsgLyogQWRqdXN0IGFzIG5lZWRlZCAqL1xuICAgIGhlaWdodDogNDYwcHg7IC8qIEFkanVzdCBhcyBuZWVkZWQgKi9cbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzAzNzM4OyAvKiBMaWdodCBncmF5IGJhY2tncm91bmQsIGFkanVzdCBjb2xvciBhcyBuZWVkZWQgKi9cbiAgICBib3JkZXItcmFkaXVzOiAyMHB4OyAvKiBUaGlzIGNyZWF0ZXMgdGhlIGN1cnZlZCBjb3JuZXJzICovXG4gICAgcGFkZGluZzogMjBweDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIG1hcmdpbjogMCBhdXRvOyAvKiBDZW50ZXJzIHRoZSBib3ggaG9yaXpvbnRhbGx5ICovXG4gICAgYm94LXNoYWRvdzogMCA0cHggNnB4IHJnYmEoMCwgMCwgMCwgMC4xKTsgLyogT3B0aW9uYWw6IGFkZHMgYSBzdWJ0bGUgc2hhZG93ICovXG4gICAgcGFkZGluZy1ib3R0b206IDBweDtcbiAgICBvdmVyZmxvdy15OiBhdXRvO1xuICB9XG5cbiAgI2J1dHRvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDMxNXB4OyAvKiBBZGp1c3QgYXMgbmVlZGVkICovXG4gICAgcGFkZGluZzogMTBweCAxNXB4O1xuICAgIG1hcmdpbjogMTBweCBhdXRvIDA7IC8qIENlbnRlcnMgdGhlIGJ1dHRvbiBhbmQgYWRkcyB0b3AgbWFyZ2luICovXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDM3LCAxNTAsIDE5MCk7IC8qIE1hdGNoZXMgdGhlIGNvbG9yIHVzZWQgaW4gaHIgKi9cbiAgICBjb2xvcjogYmxhY2s7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gICAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBBcmlhbCwgc2Fucy1zZXJpZjtcbiAgICBmb250LXNpemU6IDEwcHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMC4zcyBlYXNlO1xuICB9XG4gIFxuICAjYnV0dG9uOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjgsIDEyNiwgMTYwKTsgLyogU2xpZ2h0bHkgZGFya2VyIG9uIGhvdmVyICovXG4gIH1cbiAgXG4gICNidXR0b246YWN0aXZlIHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTsgLyogU2xpZ2h0IHB1c2ggZWZmZWN0IHdoZW4gY2xpY2tlZCAqL1xuICB9XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

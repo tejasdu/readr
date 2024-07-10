@@ -1,0 +1,26 @@
+#title {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#title span {
+    color: rgb(37, 150, 190);
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 8px;
+    margin-top: 0;
+}
+
+#divider {
+    width: 45%;
+    border: 1px rgb(37, 150, 190); /* Change the border color */
+    background-color: rgb(37, 150, 190); /* Change the background color (for older browsers) */
+    height: 1px; /* Ensures the height is 1px */
+}
