@@ -34,3 +34,61 @@
   #button:active {
     transform: translateY(1px); /* Slight push effect when clicked */
   }
+
+  /* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #303738;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: white;
+}
+
+.modal-content input {
+  width: 90%;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: rgb(37, 150, 190);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.modal-content button:hover {
+  background-color: rgb(28, 126, 160);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
