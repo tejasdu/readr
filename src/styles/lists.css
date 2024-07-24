@@ -1,10 +1,10 @@
 #list-background {
-    width: 280px; /* Adjust as needed */
+    width: 315px; /* Adjust as needed */
     max-width: 600px; /* Adjust as needed */
-    height: 460px; /* Adjust as needed */
+    height: 480px; /* Adjust as needed */
     background-color: #303738; /* Light gray background, adjust color as needed */
     border-radius: 20px; /* This creates the curved corners */
-    padding: 20px;
+    padding: 0px;
     align-items: center;
     margin: 0 auto; /* Centers the box horizontally */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */

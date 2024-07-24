@@ -4,6 +4,7 @@
     "version": "1.0.0",
     "description": "A smarter way to manage your reading lists; because you're not the average Readr.",
     "action": {
-        "default_popup": "index.html"
-    }
+      "default_popup": "index.html"
+    },
+    "permissions": ["storage", "activeTab", "contextMenus"]
   }

@@ -1,0 +1,65 @@
+.list-container {
+    border-radius: 20px;
+    padding: 0px;
+    margin: 10px auto;
+    color: white;
+    background-color: rgb(37, 150, 190);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    max-width: 290px;
+    transition: transform 0.3s ease;
+}
+
+.list-container:hover {
+    background-color: rgb(30, 130, 165); /* Darkened color */
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pop-out effect */
+}
+
+.list-name {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 8px;
+    text-align: left;
+    padding-top: 15px;
+    margin-left: 10px; /* Adjust as necessary */
+    align-items: center;
+    width: 100%; /* Ensure the text takes the full width */
+    color: black;
+}
+
+.list-icon {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-left: 10px; /* Add some margin to the left if needed */
+}
+
+.add-url {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 5px;
+}
