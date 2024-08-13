@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import Heading from './components/Heading.jsx'
 import Lists from './components/Lists.jsx'
+import 'react-tooltip/dist/react-tooltip.css'
 
 function Popup() {
     return (

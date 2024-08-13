@@ -1,6 +1,6 @@
 .list-container {
-    border-radius: 20px;
-    padding: 0px;
+    border-radius: 10px;
+    padding: 0 10px;
     margin: 10px auto;
     color: white;
     background-color: rgb(37, 150, 190);
@@ -8,58 +8,87 @@
     align-items: center;
     justify-content: space-between;
     height: 40px;
-    max-width: 290px;
+    max-width: 280px;
     transition: transform 0.3s ease;
 }
 
 .list-container:hover {
-    background-color: rgb(30, 130, 165); /* Darkened color */
-    transform: scale(1.05); /* Slightly increase the size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pop-out effect */
+    background-color: rgb(30, 130, 165);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-left {
+    display: flex;
+    align-items: center;
+}
+
+.list-right {
+    display: flex;
+    align-items: center;
+}
+
+.list-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    color: black;
+    align-items: center;
 }
 
 .list-name {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 14px;
-    font-weight: 8px;
-    text-align: left;
-    padding-top: 15px;
-    margin-left: 10px; /* Adjust as necessary */
-    align-items: center;
-    width: 100%; /* Ensure the text takes the full width */
+    font-weight: 500;
     color: black;
+    margin: 0;
 }
 
-.list-icon {
-    width: 20px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    margin-left: 10px; /* Add some margin to the left if needed */
-}
-
-.add-url {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding-right: 5px;
-}
-
-.delete-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding-right: 5px;
-}
-
+.add-url,
+.delete-button,
 .dropdown-button {
     background: none;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding-left: 0px;
-    padding-right: 5px;
+    padding: 5px;
+    color: black;
+}
+
+.add-url:hover,
+.delete-button:hover,
+.dropdown-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.collapsible-url-menu {
+    background-color: #f0f0f0;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.url-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+.url-item:last-child {
+    border-bottom: none;
+}
+
+.collapsible-url-menu {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+
+.url-item {
+    margin-bottom: 5px;
+    color: #333;
 }
