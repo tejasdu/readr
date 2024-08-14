@@ -1,5 +1,49 @@
 .url-container {
-    color: black;
-
+    position: relative;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #312a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.url-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 7.5%;
+    width: 85%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.url-container:last-child::after {
+    display: none;
+}
+
+.url-name {
+    flex-grow: 1;
+    overflow: hidden;
+    text-wrap:wrap; 
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.remove-url {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.remove-url:hover {
+    opacity: 1;
+}

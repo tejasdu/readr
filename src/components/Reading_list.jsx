@@ -59,46 +59,41 @@ export default function Reading_list({name, onDelete}) {
 
     
     return (
-            <div className="list-container">
+        <div className="list-container">
+            <div className="list-header">
                 <div className="list-left">
-                    <div className="list-icon">
-                        <ListIcon />
-                    </div>
+                    <ListIcon className="list-icon" />
                     <p className="list-name">{name}</p>
                 </div>
-
                 <div className="list-right">
                     <Tooltip title="Add Url" arrow>
                         <button className="add-url" onClick={addUrl}>
                             <AddRoundedIcon />
                         </button>
                     </Tooltip>
-
                     <Tooltip title="Delete Url" arrow> 
                         <button className="delete-button" onClick={onDelete}>
                             <BookmarkRemoveRoundedIcon className='delete-icon'/>
                         </button>
                     </Tooltip>
-
                     <Tooltip title="Show Readr list" arrow>
                         <button className='dropdown-button' onClick={() => setListOpened(!listOpened)}>
                             {listOpened ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
                         </button>
                     </Tooltip>
                 </div>
-
-                {listOpened && (
-                    <div className="collapsible-url-menu">
-                        {urls.map((url, index) => (
-                            <Url_entry
-                                key={index}
-                                name={url}
-                                onDeleteUrl={() => deleteUrl(index)}
-                            />
-                        ))}
-                    </div>
-                )}
             </div>
+            
+            <div className={`collapsible-url-menu ${listOpened ? 'open' : ''}`}>
+                {urls.map((url, index) => (
+                    <Url_entry
+                        key={index}
+                        name={url}
+                        onDeleteUrl={() => deleteUrl(index)}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }
 

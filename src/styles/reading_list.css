@@ -1,21 +1,24 @@
 .list-container {
     border-radius: 10px;
-    padding: 0 10px;
     margin: 10px auto;
-    color: white;
     background-color: rgb(37, 150, 190);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
     max-width: 280px;
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .list-container:hover {
     background-color: rgb(30, 130, 165);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 40px;
 }
 
 .list-left {
@@ -31,10 +34,8 @@
 .list-icon {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
-    display: flex;
+    margin-right: 3px;
     color: black;
-    align-items: center;
 }
 
 .list-name {
@@ -65,30 +66,23 @@
 }
 
 .collapsible-url-menu {
-    background-color: #f0f0f0;
-    border-radius: 0 0 10px 10px;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow-y: auto;  /* Changed from hidden to auto */
+    transition: max-height 0.3s ease-out;
+    background-color: transparent;
+    border-top: 1px rgb(30, 130, 165);
 }
 
-.url-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-    color: #333;
+.collapsible-url-menu.open {
+    max-height: 200px; /* Changed from 500px to 200px */
+    transition: max-height 0.5s ease-in;
 }
 
-.url-item:last-child {
-    border-bottom: none;
+/* Add these new styles for the scrollbar */
+.collapsible-url-menu::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
 }
 
-.collapsible-url-menu {
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ccc;
-}
 
-.url-item {
-    margin-bottom: 5px;
-    color: #333;
-}
+
