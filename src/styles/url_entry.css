@@ -47,3 +47,13 @@
 .remove-url:hover {
     opacity: 1;
 }
+
+.url-name a {
+    color: #ffffff; /* Set the text color to white */
+    text-decoration: none; /* Remove underline by default */
+    transition: text-decoration 0.3s ease; /* Optional: Smooth transition */
+}
+
+.url-name a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

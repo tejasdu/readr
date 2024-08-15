@@ -13,16 +13,16 @@ export default function Reading_list({name, onDelete}) {
     const [listOpened, setListOpened] = React.useState(false);
 
     useEffect(() => {
-        chrome.storage.sync.get('urlList', (result) => {
-            console.log('Loading data:', result.urlList);
-            if (result.urlList) {
-                setUrls(result.urlList);
+        chrome.storage.sync.get(name, (result) => {
+            console.log(`Loading data for ${name}:`, result[name]);
+            if (result[name]) {
+                setUrls(result[name]);
             }
         });
-    }, []);
+    }, [name]);
 
-    const saveUrlToStorage = (updatedUrls) => {
-        chrome.storage.sync.set({ urlList: updatedUrls }, () => {
+    const saveUrlsToStorage = (updatedUrls) => {
+        chrome.storage.sync.set({ [name]: updatedUrls }, () => {
             if (chrome.runtime.lastError) {
                 console.error('Error saving data:', chrome.runtime.lastError);
             } else {
@@ -31,33 +31,24 @@ export default function Reading_list({name, onDelete}) {
         });
     }
 
-    const addUrl= () => {
-        // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        //     const currentTab = tabs[0];
-        //     if (currentTab.url) {
-        //         const updatedUrls = [...urls, currentTab.url];
-        //         setUrls(updatedUrls);
-        //         saveUrlToStorage(updatedUrls);
-        //     }
-        // });
-
+    const addUrl = () => {
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             const currentTab = tabs[0];
-            if (currentTab.title) {
-                const updatedUrls = [...urls, currentTab.title];
+            if (currentTab.url && currentTab.title) {
+                const newUrl = { url: currentTab.url, title: currentTab.title };
+                const updatedUrls = [...urls, newUrl];
                 setUrls(updatedUrls);
-                saveUrlToStorage(updatedUrls);
+                saveUrlsToStorage(updatedUrls);
             }
         });
     }
 
     const deleteUrl = (index) => {
         const updatedUrls = urls.filter((_, i) => i !== index);
-        setLists(updatedUrls);
-        saveUrlToStorage(updatedUrls);      
+        setUrls(updatedUrls);
+        saveUrlsToStorage(updatedUrls);      
     }
 
-    
     return (
         <div className="list-container">
             <div className="list-header">
@@ -68,27 +59,28 @@ export default function Reading_list({name, onDelete}) {
                 <div className="list-right">
                     <Tooltip title="Add Url" arrow>
                         <button className="add-url" onClick={addUrl}>
-                            <AddRoundedIcon />
+                            <AddRoundedIcon  fontSize='small'/>
                         </button>
                     </Tooltip>
                     <Tooltip title="Delete Url" arrow> 
                         <button className="delete-button" onClick={onDelete}>
-                            <BookmarkRemoveRoundedIcon className='delete-icon'/>
+                            <BookmarkRemoveRoundedIcon  fontSize='small' className='delete-icon'/>
                         </button>
                     </Tooltip>
                     <Tooltip title="Show Readr list" arrow>
                         <button className='dropdown-button' onClick={() => setListOpened(!listOpened)}>
-                            {listOpened ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
+                            {listOpened ? <KeyboardArrowDownIcon  fontSize='small' /> : <KeyboardArrowRightIcon fontSize='small'/>}
                         </button>
                     </Tooltip>
                 </div>
             </div>
             
             <div className={`collapsible-url-menu ${listOpened ? 'open' : ''}`}>
-                {urls.map((url, index) => (
+                {urls.map((urlObj, index) => (
                     <Url_entry
                         key={index}
-                        name={url}
+                        title={urlObj.title}
+                        link={urlObj.url}
                         onDeleteUrl={() => deleteUrl(index)}
                     />
                 ))}

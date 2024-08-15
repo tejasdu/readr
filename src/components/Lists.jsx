@@ -7,17 +7,17 @@ export default function Lists() {
     const [newList, setNewList] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Load data from chrome.storage when the component mounts
     useEffect(() => {
         chrome.storage.sync.get('readingLists', (result) => {
             console.log('Loading data:', result.readingLists);
             if (result.readingLists) {
                 setLists(result.readingLists);
+            } else {
+                console.log('No reading lists found in storage');
             }
         });
     }, []);
 
-    // Function to save data to chrome.storage
     const saveListToStorage = (updatedLists) => {
         chrome.storage.sync.set({ readingLists: updatedLists }, () => {
             if (chrome.runtime.lastError) {
@@ -39,9 +39,19 @@ export default function Lists() {
     };
 
     const deleteList = (index) => {
+        const listToDelete = lists[index];
         const updatedLists = lists.filter((_, i) => i !== index);
         setLists(updatedLists);
-        saveToStorage(updatedLists);
+        saveListToStorage(updatedLists);
+
+        // Remove the individual list data
+        chrome.storage.sync.remove(listToDelete, () => {
+            if (chrome.runtime.lastError) {
+                console.error('Error removing list data:', chrome.runtime.lastError);
+            } else {
+                console.log(`Data for list "${listToDelete}" removed successfully`);
+            }
+        });
     };
 
     return (
